@@ -1,0 +1,22 @@
+from rest_framework import serializers
+from .models import Book,Author,Review
+
+class AuthorSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Author
+        fields='__all__'
+
+
+class BookSerializer(serializers.ModelSerializer):
+    author=serializers.PrimaryKeyRelatedField(queryset=Author.objects.all())
+    class Meta:
+        model=Book
+        fields = '__all__'
+
+class ReviewSerializer(serializers.ModelSerializer):
+    book=serializers.PrimaryKeyRelatedField(queryset=Book.objects.all())
+    class Meta:
+        model=Review
+        fields='__all__'
+
+
