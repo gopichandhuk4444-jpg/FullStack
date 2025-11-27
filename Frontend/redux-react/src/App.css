@@ -1,0 +1,161 @@
+/* Container for the entire recipe list */
+.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  /* Responsive grid: adjusts columns based on screen size */
+  gap: 20px;  /* Space between grid items */
+  padding: 20px;  /* Padding around the list */
+  justify-items: center;  /* Center items horizontally in their grid cells */
+}
+
+/* Individual recipe card container */
+.recipe-card {
+  border: 1px solid #ddd;  /* Light border for card outline */
+  border-radius: 8px;  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+  padding: 15px;  /* Internal spacing */
+  text-align: center;  /* Center text and image */
+  background-color: #fff;  /* White background */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;  /* Smooth hover animation */
+  cursor: pointer;  /* Pointer cursor on hover to indicate clickability */
+}
+
+/* Hover effect for the recipe card */
+.recipe-card:hover {
+  transform: scale(1.05);  /* Slight zoom on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);  /* Deeper shadow on hover */
+}
+
+/* Styling for the recipe image */
+.recipe-image {
+  width: 150px;  /* Fixed width as in your JSX */
+  height: 150px;  /* Fixed height as in your JSX */
+  object-fit: cover;  /* Ensures image fits without distortion, cropping if needed */
+  border-radius: 4px;  /* Slight rounding for the image */
+  margin-bottom: 10px;  /* Space below the image */
+}
+
+/* Styling for the recipe name (h3) */
+.recipe-name {
+  font-size: 18px;  /* Slightly larger font for readability */
+  font-weight: bold;  /* Bold text */
+  color: #333;  /* Dark color for contrast */
+  margin: 0;  /* Remove default margins */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .recipe-list {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));  /* Smaller columns on mobile */
+    gap: 15px;  /* Reduce gap on smaller screens */
+    padding: 10px;  /* Less padding on mobile */
+  }
+  
+  .recipe-card {
+    padding: 10px;  /* Less padding on mobile */
+  }
+  
+  .recipe-image {
+    width: 120px;  /* Smaller image on mobile */
+    height: 120px;
+  }
+  
+  .recipe-name {
+    font-size: 16px;  /* Smaller font on mobile */
+  }
+}
+/* Container for the entire recipe details */
+.recipe-details {
+  max-width: 800px;  /* Limits width for readability on large screens */
+  margin: 0 auto;  /* Centers the container horizontally */
+  padding: 20px;  /* Internal spacing */
+  background-color: #fff;  /* White background for a card-like feel */
+  border-radius: 8px;  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+  text-align: center;  /* Centers text and image */
+}
+
+/* Styling for the back button */
+.recipe-details button {
+  background-color: #d2691e;  /* Warm color, like cinnamon, to match recipe theme */
+  color: #fff;  /* White text */
+  border: none;  /* Removes default border */
+  border-radius: 4px;  /* Slight rounding */
+  padding: 10px 15px;  /* Spacing inside button */
+  font-size: 16px;  /* Readable font size */
+  cursor: pointer;  /* Pointer on hover */
+  margin-bottom: 20px;  /* Space below button */
+  transition: background-color 0.3s ease;  /* Smooth hover effect */
+}
+
+.recipe-details button:hover {
+  background-color: #b8571f;  /* Darker shade on hover */
+}
+
+/* Styling for the recipe name (h1) */
+.recipe-details h1 {
+  font-size: 2rem;  /* Large, prominent font */
+  font-weight: bold;  /* Bold for emphasis */
+  color: #333;  /* Dark color for contrast */
+  margin-bottom: 15px;  /* Space below title */
+}
+
+/* Styling for the recipe image */
+.recipe-details img {
+  border-radius: 8px;  /* Rounded corners to match container */
+  margin-bottom: 20px;  /* Space below image */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Light shadow for image */
+}
+
+/* Styling for the ingredients list (ul) */
+.recipe-details ul {
+  text-align: left;  /* Left-align list items for readability */
+  margin-bottom: 20px;  /* Space below list */
+  padding-left: 20px;  /* Indent for bullets */
+}
+
+.recipe-details ul li {
+  font-size: 1rem;  /* Standard font size */
+  line-height: 1.5;  /* Spacing between lines */
+  color: #555;  /* Slightly muted color */
+  margin-bottom: 5px;  /* Space between items */
+}
+
+/* Styling for the instructions list (ol) */
+.recipe-details ol {
+  text-align: left;  /* Left-align for steps */
+  padding-left: 20px;  /* Indent for numbers */
+}
+
+.recipe-details ol li {
+  font-size: 1rem;
+  line-height: 1.6;  /* Slightly more spacing for instructions */
+  color: #555;
+  margin-bottom: 10px;  /* More space between steps */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .recipe-details {
+    padding: 15px;  /* Less padding on mobile */
+    margin: 10px;  /* Smaller margins */
+  }
+  
+  .recipe-details h1 {
+    font-size: 1.5rem;  /* Smaller title on mobile */
+  }
+  
+  .recipe-details img {
+    height: 150px;  /* Smaller image */
+    width: 150px;
+  }
+  
+  .recipe-details button {
+    font-size: 14px;  /* Smaller button text */
+    padding: 8px 12px;
+  }
+  
+  .recipe-details ul,
+  .recipe-details ol {
+    padding-left: 15px;  
+  }
+}

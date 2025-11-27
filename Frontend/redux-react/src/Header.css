@@ -1,0 +1,103 @@
+.header {
+  background-color: #f8f4e3;  /* Light, food-inspired color (e.g., cream) */
+  color: #333;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+  position: sticky;  /* Sticks to top on scroll */
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 1200px;  /* Limit width for large screens */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;  /* Title left, nav right */
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;  /* Space between links */
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+  color: #d2691e;  /* Warm color on hover, like cinnamon */
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;  /* Stack title and nav vertically */
+    text-align: center;
+  }
+  .header-nav ul {
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+}
+.footer {
+  background-color: #333;  /* Dark background for contrast */
+  color: #fff;
+  padding: 1rem 0;
+  margin-top: auto;  /* Pushes footer to bottom if using flexbox in app */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;  /* Text left, links right */
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #f8f4e3;  /* Light hover color */
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;  /* Stack vertically */
+    text-align: center;
+    gap: 0.5rem;
+  }
+  .footer-links {
+    gap: 0.5rem;
+  }
+}

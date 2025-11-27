@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS learning</title>
+    <script>
+        let arr = new Array('media/pic_bulbon.gif','media/pic_bulboff.gif');
+        let i = 1, ref;
+        function lib(){
+            document.images['bulb'].src=arr[i]
+            i=(i==1)?0:1
+        }
+        function start(){
+            ref=setInterval('lib()',1000);
+        }
+        function stop(){
+            clearInterval(ref);
+        }
+    </script>
+</head>
+<body onload="start()">
+    <h1>My first JavaScript</h1>
+    <p id="demo">Js can chang the font of the HTML element</p>
+    <img name="bulb" src="media/pic_bulboff.gif" onmouseover="stop()" onmouseout="start()">
+</body>
+</html>
